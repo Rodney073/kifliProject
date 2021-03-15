@@ -29,11 +29,13 @@ public class CurrencyController {
         CurrencyEnum to = null;
         int number = 1;
 
-        if (currencyService.getChangeRates().size() != 0) {
+        if (!currencyService.getChangeRates().isEmpty()) {
 
-            base = currencyService.getChangeRates().get(currencyService.getChangeRates().size()-1).getBase();
-            to = currencyService.getChangeRates().get(currencyService.getChangeRates().size()-1).getTo();
-            number = currencyService.getChangeRates().get(currencyService.getChangeRates().size()-1).getNumber();
+            int lastListItem = currencyService.getChangeRates().size()-1;
+
+            base = currencyService.getChangeRates().get(lastListItem).getBase();
+            to = currencyService.getChangeRates().get(lastListItem).getTo();
+            number = currencyService.getChangeRates().get(lastListItem).getNumber();
 
             model.addAttribute("base", base);
             model.addAttribute("to", to);
