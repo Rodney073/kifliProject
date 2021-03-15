@@ -1,0 +1,84 @@
+h2 {
+    color: darkolivegreen;
+    display: inline;
+}
+
+nav {
+    display: inline-block;
+    background: #010f07;
+    padding: 5px 20px 30px 20px;
+    width: 100%;
+    height: min-content;
+    margin-bottom: 30px;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("https://cdn.wallpapersafari.com/23/37/ZuqVsC.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Verdana;
+}
+
+.my-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 20px 30px 20px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    opacity: 0.85;
+}
+
+.container {
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    background: #010f07;
+    display: inline-block;
+    width: 300px;
+}
+
+.innerContainer {
+    width: max-content;
+    margin: auto;
+}
+
+#navbarResponsive {
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    text-align: right;
+    width: 500px;
+    float: right;
+    background: #010f07;
+    display: inline-block;
+}
+
+.nav-item {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.table {
+    margin-top: 10px;
+}
+
+.result {
+    color: darkolivegreen;
+}
+
+#choose {
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: darkolivegreen;
+    color: white;
+    margin: 0 auto;
+}

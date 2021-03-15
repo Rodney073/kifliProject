@@ -1,0 +1,100 @@
+[
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Currency</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="bg">
+
+        <nav>
+            <div class="container">
+                <h1 id="PageTitle">Kifli Project</h1>[]
+            </div>
+            <div id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <h4>Currencies</h4>
+                    </li>
+                    <li class="nav-item">
+                        <h4>Counter</h4>
+                    </li>
+                    <li class="nav-item">
+                        <h4>Bucket list</h4>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <section>
+            <div class="my-container">
+
+                <div class="innerContainer">
+
+                    <h2 id="choose">Choose currencies</h2>
+                    <br><br><br>
+                    <form method="POST" action="/currencies">
+                        <label for="number">Number</label>
+                        <input type="number" id="number" name="number" value="1"><br>
+
+                        <label for="base">Base</label>
+                        <select name="base">
+                <option value=""></option>
+                <option id="base" th:each="base : ${T(com.rodney073.kifliproject.models.CurrencyEnum).values()}"  th:value="${base}" th:text="${base}"></option>
+            </select>
+
+                        <label for="to">To</label>
+                        <select name="to">
+                <option value=""></option>
+                <option id="to" th:each="to : ${T(com.rodney073.kifliproject.models.CurrencyEnum).values()}" th:value="${to}" th:text="${to}"></option>
+            </select>
+                        <br>
+                        <button type="submit" class="button" value="change">Change</button>
+                    </form>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>
+                                    <h3>Number</h3>
+                                </th>
+                                <th>
+                                    <h3>From</h3>
+                                </th>
+                                <th>
+                                    <h3>To</h3>
+                                </th>
+                                <th>
+                                    <h3>Result</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h3 class="result" th:text="${number}"></h3>
+                                </td>
+                                <td>
+                                    <h3 class="result" th:text="${base}"></h3>
+                                </td>
+                                <td>
+                                    <h3 class="result" th:text="${to}"></h3>
+                                </td>
+                                <td>
+                                    <h3 class="result" th:text="${result}"></h3>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+
+</html>]
