@@ -3,15 +3,6 @@ h2 {
     display: inline;
 }
 
-nav {
-    display: inline-block;
-    background: #010f07;
-    padding: 5px 20px 30px 20px;
-    width: 100%;
-    height: min-content;
-    margin-bottom: 30px;
-}
-
 body,
 html {
     height: 100%;
@@ -26,6 +17,10 @@ html {
     font-family: Verdana;
 }
 
+.navbar {
+    margin-bottom: 50px;
+}
+
 .my-container {
     border: 1px solid black;
     border-radius: 5px;
@@ -37,36 +32,16 @@ html {
     opacity: 0.85;
 }
 
-.container {
-    color: #ffffff;
-    font-family: "Helvetica Neue", Helvetica, Arial;
-    background: #010f07;
-    display: inline-block;
-    width: 300px;
-}
 
 .innerContainer {
     width: max-content;
     margin: auto;
 }
 
-#navbarResponsive {
-    color: #ffffff;
-    font-family: "Helvetica Neue", Helvetica, Arial;
-    text-align: right;
-    width: 500px;
-    float: right;
-    background: #010f07;
-    display: inline-block;
-}
-
-.nav-item {
-    margin-left: 30px;
-    margin-top: 30px;
-}
 
 .table {
     margin-top: 10px;
+    padding: 0px;
 }
 
 .result {
