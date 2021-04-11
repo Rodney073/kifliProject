@@ -49,6 +49,7 @@ html {
 
 .bg-gradient {
     background: #303030;
+    opacity: 0.9;
 }
 
 .rounded {

@@ -6,7 +6,7 @@
 
     <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
     <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.11.2/css/all.css} "/>
-    <link th:rel="stylesheet" th:href="@{/css/custom.css} "/>
+    <link th:rel="stylesheet" th:href="@{/css/calendarstyle.css} "/>
 </head>
 <body>
     <div class="bg">
@@ -43,41 +43,16 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-2 mt-4"></div>
-        <div class="col-lg-8 mt-4">
+        <div class="col-lg-8 mt-5">
             <div class="rounded bg-gradient text-white shadow p-5 text-center mb-5">
-                <p class="h1 font-weight-bold">We'll meet again in</p>
-                <div id="clock" class="countdown pt-4"></div>
-                <br>
-                <p><label>Title: </label> <strong th:text="${event.title}"></strong></p>
-                <p><label>Description: </label> <strong th:text="${event.description}"></strong></p>
-                <p><label>Date: </label> <strong th:text="${#dates.format(event.date, 'dd/MM/yyyy h:mm a')}"></strong></p>
-
-                <a th:href="@{/countdown}" class="btn btn-success">Go back</a>
-                
+       
             </div>
         </div>
-        <div class="col-lg-2 mt-4"></div>
     </div>
 </div>
 
 </div>
-<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-<script th:src="@{/assets/jquery-countdown/jquery.countdown.min.js}"></script>
 
-<script th:inline="javascript">
-    var endDate = [[${#calendars.format(event.date,'yyyy/MM/dd h:mm a')}]];
-
-    $('#clock').countdown(endDate).on('update.countdown', function (event) {
-        var $this = $(this).html(event.strftime(''
-            + '<span class="h1 font-weight-bold">%D</span> Day%!d'
-            + '<span class="h1 font-weight-bold">%H</span> Hr'
-            + '<span class="h1 font-weight-bold">%M</span> Min'
-            + '<span class="h1 font-weight-bold">%S</span> Sec'));
-    });
-</script>
-
+<script type="text/javascript" src="js/calendarscripts.js"></script>
 </body>
 </html>
